@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Проверка объекта</title>
+  <style>
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .user-info a {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Проверка объекта</h1>
+  <div class="user-info">
+    <a id="name-link" href="#">Имя пользователя</a>
+    <a id="age-link" href="#">Возраст пользователя</a>
+  </div>
+
+  <script>
+    let user = {
+      name: "John",
+      age: 30
+    };
+
+    let nameLink = document.getElementById("name-link");
+    let ageLink = document.getElementById("age-link");
+
+    nameLink.textContent = user.name;
+    ageLink.textContent = user.age;
+
+    nameLink.addEventListener("click", function() {
+      alert("Имя пользователя: " + user.name);
+    });
+
+    ageLink.addEventListener("click", function() {
+      alert("Возраст пользователя: " + user.age);
+    });
+  </script>
+</body>
+</html>

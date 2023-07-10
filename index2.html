@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример объекта product</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Данные продукта:</h1>
+  <p id="productName"></p>
+  <p id="productPrice"></p>
+
+  <script>
+    let product = {
+      productName: "Монитор",
+      productPrice: 500
+    };
+
+    document.getElementById("productName").textContent = "Название продукта: " + product.productName;
+    document.getElementById("productPrice").textContent = "Цена продукта: " + product.productPrice;
+  </script>
+</body>
+</html>

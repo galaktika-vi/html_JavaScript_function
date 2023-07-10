@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Увеличение числового значения вдвое</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+      padding: 5px;
+      width: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Увеличение числового значения вдвое</h1>
+  <label for="inputValue">Введите число:</label>
+  <input type="number" id="inputValue" min="0">
+  <button onclick="doubleValue()">Увеличить вдвое</button>
+  <p id="result"></p>
+
+  <script>
+    function doubleValue() {
+      let inputValue = document.getElementById("inputValue").value;
+      let result = parseInt(inputValue) * 2;
+
+      document.getElementById("result").textContent = "Результат: " + result;
+    }
+  </script>
+</body>
+</html>
